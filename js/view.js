@@ -120,6 +120,12 @@ const View = {
         <span class="lang" style="--lc:${f.color}">${f.tag}</span>
         <h3>${f.live ? '<span class="live-dot"></span>' : ""}${this.splitTitle(f.title)}</h3>
         <p>${f.desc}</p>
+        <br>
+        <p>${f.role}</p>
+
+        <div class="darkpaper">
+          ${f.work}
+        </div>
         <div class="meta"><span>${f.live ? "LIVE NOW" : "HIGHLIGHT"}</span><span class="go">${f.cta}</span></div>`;
       this.els.featGrid.appendChild(a);
     });

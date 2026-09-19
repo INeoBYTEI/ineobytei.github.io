@@ -228,7 +228,7 @@ body[data-screen]:not([data-screen="home"]) #slash{
 .card.feat .meta .go{background:var(--white);color:var(--black);}
 .card.feat:hover .meta .go{background:var(--red);color:var(--white);}
 #feat-grid,.grid{
-  display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(40%,1fr));
   gap:26px 34px;padding-top:14px;
 }
 #repo-grid{padding-top:14px;}
@@ -278,6 +278,12 @@ body[data-screen]:not([data-screen="home"]) #slash{
 /* ---------- ABOUT / CONTACT ---------- */
 .paper{
   max-width:760px;background:var(--white);color:var(--ink);
+  padding:30px 34px;font-size:18px;line-height:1.55;
+  clip-path:polygon(0 4%, 2% 0, 100% 0, 100% 94%, 98% 100%, 0 100%);
+  transform:rotate(-.6deg);box-shadow:10px 10px 0 rgba(0,0,0,.55);
+  margin-bottom:4vh;
+}.darkpaper{
+  max-width:760px;background:var(rgba(36, 36, 36, 0.85));color:var(--ink);
   padding:30px 34px;font-size:18px;line-height:1.55;
   clip-path:polygon(0 4%, 2% 0, 100% 0, 100% 94%, 98% 100%, 0 100%);
   transform:rotate(-.6deg);box-shadow:10px 10px 0 rgba(0,0,0,.55);
