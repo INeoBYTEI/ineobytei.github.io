@@ -184,6 +184,7 @@ void DoAttackHit(GameObject targetObj, bool dealDamage = false)
 
 ### Round Up Attack
 ![Gameplay](./RoundUp.gif)
+
 An attack sequence that didn't make the cut to the demo was the Round Up attack. It was designed as a spatial combat sequence and an alternative pattern to the standard attack.
 ```csharp
 Vector3 clusterCenter = CalculateClusterCenterOfMass();
