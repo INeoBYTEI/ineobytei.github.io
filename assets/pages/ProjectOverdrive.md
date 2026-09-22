@@ -1,14 +1,12 @@
-# [PROJECT NAME]
+# Project Overdrive
 
-**[PROJECT NAME]** is a [genre] about [one-sentence description of the player fantasy / premise].
+**Project Overdrive** is a high-speed sci-fi action platformer where you build momentum through fluid movement and high-octane combat while facing colossal creatures.
 
-[Short punchy line]
-[Short punchy line]
-[Short punchy line]
+Play as Laila, a cybernetically enhanced badass who finds herself in a dangerous crater overrun by alien spawn. Defeat enemies to increase speed and charge your Overdrive, all while avoiding devastating attacks from massive bosses hunting you throughout each battlefield. 
 
-[Optional tagline / hook]
+Inspired by games such as Haste: Broken Worlds, Vampire Survivors, Shadow of the Colossus  and character action games.
 
-[YouTube embed]
+[![Project Overdrive](https://img.youtube.com/vi/AkgLkKMUQdQ/maxresdefault.jpg)](https://www.youtube.com/watch?v=AkgLkKMUQdQ)
 
 [Gallery / screenshots]
 
