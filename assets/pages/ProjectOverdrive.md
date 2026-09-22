@@ -9,7 +9,7 @@ Inspired by games such as Haste: Broken Worlds, Vampire Survivors, Shadow of the
 [![Project Overdrive](https://img.youtube.com/vi/AkgLkKMUQdQ/maxresdefault.jpg)](https://www.youtube.com/watch?v=AkgLkKMUQdQ)
 Click to see the trailer
 
-[Gallery / screenshots]
+[[Check out the Demo here}](https://yrgo.itch.io/overdrive)
 
 ## About this game
 
