@@ -23,7 +23,7 @@ const Model = {
     {
       title: "Project Overdrive",
       tag: "In Development", color: "#f1e05a",
-      url: "https://yrgo.itch.io/overdrive", cta: "Details →",
+      url: "https://github.com/INeoBYTEI/ineobytei.github.io/blob/main/assets/pages/ProjectOverdrive.md", cta: "Details →",
       img: "assets/projects/bsl.png",
       desc: "A high-speed sci-fi action platformer where you build momentum through fluid movement and high-octane combat while facing colossal creatures.",
       role: "Game Director · Gameplay Programming · Game Feel/Juice",

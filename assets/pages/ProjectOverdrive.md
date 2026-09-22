@@ -79,6 +79,7 @@ My goal throughout development was to connect the technical implementation with 
 ## Technical Overview
 
 ### Player Attack Handler
+![Gameplay](../PO_Kill.gif)
 I wanted the attack to feel increasingly dramatic as the player committed to it. The attack slows time, widens the camera's FOV, then rapidly chains through marked enemies. Attack timing is also influenced by player velocity, making the sequence feel faster and more aggressive when the player enters it at high speed.
 ```csharp
 IEnumerator PerformAttackSequence()
