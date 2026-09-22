@@ -77,7 +77,7 @@ I served as **Game Director** and **General Programmer**, primarily responsible 
 ## Technical Overview
 
 ### Player Attack Handler
-
+I wanted the attack to feel increasingly dramatic as the player committed to it. The attack slows time, widens the camera's FOV, then rapidly chains through marked enemies. Attack timing is also influenced by player velocity, making the sequence feel faster and more aggressive when the player enters it at high speed.
 ```csharp
 IEnumerator PerformAttackSequence()
     {
@@ -153,3 +153,4 @@ IEnumerator PerformAttackSequence()
         OnAttackEnd.Invoke();
     }
 ```
+
