@@ -153,4 +153,31 @@ IEnumerator PerformAttackSequence()
         OnAttackEnd.Invoke();
     }
 ```
+Every successful attack triggers multiple layers of feedback: VFX, positioning, camera shake, sound, and events. Separating these effects from the damage calculation allowed the attack to feel impactful without coupling the feedback systems directly to combat logic.
+```csharp
+void DoAttackHit(GameObject targetObj, bool dealDamage = false)
+{
+    _playerVFXHandler.SpawnEffect(
+        targetObj.transform.position + targetObj.transform.forward,
+        Quaternion.LookRotation(transform.forward));
 
+    _playerModel.transform.position =
+        targetObj.transform.position - transform.forward * 2f;
+
+    _dynamicCameraHandler.ShakeCamera(_attackShakeIntensity, 0.075f);
+    SFX.Attack.Play(SettingsROM._SFXVolume);
+
+    if (dealDamage)
+    {
+        Health_Class enemyHealthComponent =
+            targetObj.GetComponent<Health_Class>();
+
+        if (enemyHealthComponent != null)
+        {
+            enemyHealthComponent.TakeDamage(_attackDamage);
+        }
+    }
+
+    OnAttackHit.Invoke();
+}
+```
