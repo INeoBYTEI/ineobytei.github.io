@@ -15,7 +15,7 @@ Click to see the trailer
 
 Built in Unity 6.3 (12 weeks).
 A team of 8 — 4 programmers, 3 artists, 1 composer.
-I served as **Game Director** and **General Programmer**, with a focus on gameplay systems, combat, player movement, game feel, and technical implementation. I also coordinated development across disciplines, helped define the project's scope and design direction, and directed the game's trailer and promotional presentation.
+I served as **Game Director** and **General Programmer**, with a focus on **gameplay systems, combat, player movement** and **game feel**. I also coordinated development across disciplines, helped define the project's scope and design direction, and directed the game's trailer and promotional presentation.
 
 My goal throughout development was to connect the technical implementation with the intended player experience: fast, expressive combat that makes the player feel powerful and constantly in motion.
 
@@ -25,8 +25,8 @@ My goal throughout development was to connect the technical implementation with 
 - Player Animation Integration
 - User Experience and Feedback
 - Minor Enemy Optimization
-- [Leadership/design responsibility]
-- [Other significant contribution]
+- Game Trailer
+- Animation
 
 ### Design philosophy
 
