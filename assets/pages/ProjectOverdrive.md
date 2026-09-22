@@ -181,3 +181,40 @@ void DoAttackHit(GameObject targetObj, bool dealDamage = false)
     OnAttackHit.Invoke();
 }
 ```
+
+### Round Up Attack
+![Gameplay](./RoundUp.gif)
+An attack sequence that didn't make the cut to the demo was the Round Up attack. It was designed as a spatial combat sequence and an alternative pattern to the standard attack.
+```csharp
+Vector3 clusterCenter = CalculateClusterCenterOfMass();
+
+foreach (DetectedTarget target in _playerMarkHandler._detectedTargets)
+{
+    if (target.Target != null)
+    {
+        target.Target.transform.DOMove(
+            clusterCenter,
+            0.035f
+        ).SetEase(Ease.OutQuad);
+    }
+}
+```
+Marked enemies are pulled toward a shared center point as the player "Round's them Up" before executing the enemies.
+```csharp
+_playerModel.transform.SetParent(centerPoint.transform, true);
+
+_playerModel.transform.DOLookAt(clusterCenter, 0.01f);
+
+_playerModel.transform.position =
+    clusterCenter - _playerModel.transform.forward * 7f;
+
+_playerModel.transform.parent
+    .DOLocalRotate(
+        new Vector3(0, 720f, 0),
+        0.075f,
+        RotateMode.FastBeyond360)
+    .SetRelative(true)
+    .SetEase(Ease.InOutQuad);
+```
+Once the enemies have been gathered, the player is temporarily parented to a central pivot and rotated around the group. This lets the attack create a controlled visual composition while still being driven entirely through gameplay code.
+This approach let me treat combat as a combination of gameplay logic and spatial choreography, feeding the power fantasy of the player without relying entirely on animation since we didn't have a dedicated animator for this project.
