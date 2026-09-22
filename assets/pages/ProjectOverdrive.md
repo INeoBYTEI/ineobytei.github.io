@@ -7,7 +7,7 @@ Play as Laila, a cybernetically enhanced badass who finds herself in a dangerous
 Inspired by games such as Haste: Broken Worlds, Vampire Survivors, Shadow of the Colossus  and character action games.
 
 [![Project Overdrive](https://img.youtube.com/vi/AkgLkKMUQdQ/maxresdefault.jpg)](https://www.youtube.com/watch?v=AkgLkKMUQdQ)
-Click to see the trailer
+Click to see the [trailer](https://www.youtube.com/watch?v=AkgLkKMUQdQ)
 
 [Check out the Demo here](https://yrgo.itch.io/overdrive)
 
@@ -54,27 +54,27 @@ My goal throughout development was to connect the technical implementation with 
 
 ### What went well?
 
-[Specific system, design decision, workflow, team process, or technical solution that worked particularly well.]
+<!-- [Specific system, design decision, workflow, team process, or technical solution that worked particularly well.]
 
-[Explain why it worked.]
+[Explain why it worked.] -->
 
 ### What went wrong?
 
-[Technical/design/team problem.]
+<!-- [Technical/design/team problem.]
 
 [What caused it?]
 
-[How did you solve it, or what would you do differently next time?]
+[How did you solve it, or what would you do differently next time?] -->
 
 ### Takeaways
 
-[What did YOU learn from the project?]
+<!-- [What did YOU learn from the project?]
 
 [How did your programming/design skills develop?]
 
 [How did your leadership skills develop?]
 
-[What would you approach differently on the next project?]
+[What would you approach differently on the next project?] -->
 
 ## Technical Overview
 
