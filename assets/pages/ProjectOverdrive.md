@@ -1,4 +1,4 @@
-# Project Overdrive
+# Project Overdrive [DEMO]
 
 **Project Overdrive** is a high-speed sci-fi action platformer where you build momentum through fluid movement and high-octane combat while facing colossal creatures.
 
@@ -13,14 +13,15 @@ Click to see the trailer
 
 ## About this game
 
-Built in [ENGINE] ([TIMEFRAME]).
-A team of [X] — [X programmers, X artists, etc.].
-I served as **[ROLE]**, primarily responsible for [your major responsibilities].
+Built in Unity 6.3 (12 weeks).
+A team of 8 — 4 programmers, 3 artists, 1 composer.
+I served as **Game Director** and **General Programmer**, primarily responsible for [your major responsibilities].
 
 ### My contributions
 
-- [Gameplay/system you built]
-- [Gameplay/system you designed]
+- Player Combat Mechanics
+- Player Animation Integration
+- User Experience and Feedback
 - [Technical problem you solved]
 - [Leadership/design responsibility]
 - [Other significant contribution]
@@ -75,7 +76,80 @@ I served as **[ROLE]**, primarily responsible for [your major responsibilities].
 
 ## Technical Overview
 
-### [System / Feature #1]
+### Player Attack Handler
 
 ```csharp
-// Relevant code
+IEnumerator PerformAttackSequence()
+    {
+        if (_playerMarkHandler._detectedTargets.Count == 0)
+        {
+            _isAttacking = false;
+            yield break; // No targets detected, exit the coroutine
+        }
+        _playerAnimationHandler._animator.SetTrigger("Detonate");
+        ScreenEffectHandler screenEffectHandler = ScreenEffectHandler.Instance;
+        screenEffectHandler.AttackScreenEffect(_attackHitDuration * _playerMarkHandler._detectedTargets.Count + .5f);
+        _playerVFXHandler.SetTrailActive(true);
+
+        OnAttackStart.Invoke();
+
+
+        // Slow down time and increase FOV for dramatic effect
+        _timeScaleManager.SetTimeScale(_attackStartTimeScale);
+        _dynamicCameraHandler.BounceFov(125f, 5f, 1f + 0.1f, 5f, 2, "Attack Start FOV");
+
+        if (PausMenu.Instance.IsPaused()) { yield return new WaitForSeconds(_attackStartDuration); }
+        else { yield return new WaitForSecondsRealtime(_attackStartDuration); }
+
+
+        _timeScaleManager.SetTimeScale(_attackSequenceTimeScale);
+        if (_playerMovementScript.GetGear() != 3)
+        {
+            _dynamicCameraHandler.BounceFov(125f, 5f, _attackHitDuration * _playerMarkHandler._detectedTargets.Count + .5f, 5f, 1, "Attack Sequence FOV");
+        }
+
+        
+        float attackHitDurationTemp = _attackHitDuration - (_playerMovementScript.GetVelocityMagnitude() * _attackSpeedByVelocity); 
+        if (attackHitDurationTemp > 0){
+        foreach (DetectedTarget target in _playerMarkHandler._detectedTargets)
+        {
+            GameObject targetObj = target.Target;
+            if (targetObj != null)
+            {
+                    if (PausMenu.Instance.IsPaused()) { yield return new WaitForSeconds(attackHitDurationTemp); }
+                    else { yield return new WaitForSecondsRealtime(attackHitDurationTemp); }
+                    
+                DoAttackHit(targetObj);
+            }
+        }}
+        
+        
+        _timeScaleManager.SetTimeScale(_attackStartTimeScale);
+
+        if (_roundUp)
+        {
+            StartCoroutine(PerformRoundUp());
+            if (PausMenu.Instance.IsPaused()) { yield return new WaitForSeconds(0.5f); }
+            else { yield return new WaitForSecondsRealtime(0.5f); }
+
+        }
+
+        foreach (DetectedTarget target in _playerMarkHandler._detectedTargets)
+        {
+            GameObject targetObj = target.Target;
+            if (targetObj != null)
+            {
+                targetObj.transform.DOKill();
+                DoAttackHit(targetObj, true);
+            }
+        }
+
+
+        if (PausMenu.Instance.IsPaused()) { yield return new WaitForSeconds(_attackEndDuration); }
+        else { yield return new WaitForSecondsRealtime(_attackEndDuration); }
+        
+
+        DoAttackEnd();
+        OnAttackEnd.Invoke();
+    }
+```
