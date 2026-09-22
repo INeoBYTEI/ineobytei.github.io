@@ -182,6 +182,7 @@ void DoAttackHit(GameObject targetObj, bool dealDamage = false)
 }
 ```
 
+
 ### Round Up Attack
 ![Gameplay](./RoundUp.gif)
 
@@ -219,3 +220,37 @@ _playerModel.transform.parent
 ```
 Once the enemies have been gathered, the player is temporarily parented to a central pivot and rotated around the group. This lets the attack create a controlled visual composition while still being driven entirely through gameplay code.
 This approach let me treat combat as a combination of gameplay logic and spatial choreography, feeding the power fantasy of the player without relying entirely on animation since we didn't have a dedicated animator for this project.
+
+
+
+### Grunt Rendering Optimization
+Project Overdrive could have large numbers of Grunts active simultaneously, which made rendering cost an important consideration. Instead of treating every enemy identically, I implemented camera-frustum visibility checks and used the result to dynamically adjust their visual workload.
+```csharp
+private bool IsVisible()
+{
+    if (_targetCamera == null || _renderer == null)
+        return false;
+
+    if (!TryGetLODGroupBounds(out Bounds bounds))
+        return false;
+
+    GeometryUtility.CalculateFrustumPlanes(_targetCamera, cameraPlanes);
+    return GeometryUtility.TestPlanesAABB(cameraPlanes, bounds);
+}
+```
+The visibility state then controls both the enemy's LOD and its trail effect:
+```csharp
+if (IsVisibleToCamera)
+{
+    _lodGroup.ForceLOD(-1);
+    _trailRenderer.SetActive(true);
+}
+else
+{
+    _lodGroup.ForceLOD(2);
+    _trailRenderer.SetActive(false);
+}
+```
+This meant enemies outside the camera's view could fall back to a cheaper representation while visual effects such as trails were disabled entirely.
+
+I also combined this with Unity's LODGroup system, allowing the Grunts to scale their visual complexity depending on how relevant they were to the player's current view.
