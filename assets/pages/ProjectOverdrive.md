@@ -7,6 +7,7 @@ Play as Laila, a cybernetically enhanced badass who finds herself in a dangerous
 Inspired by games such as Haste: Broken Worlds, Vampire Survivors, Shadow of the Colossus  and character action games.
 
 [![Project Overdrive](https://img.youtube.com/vi/AkgLkKMUQdQ/maxresdefault.jpg)](https://www.youtube.com/watch?v=AkgLkKMUQdQ)
+Click to see the trailer
 
 [Gallery / screenshots]
 
