@@ -30,7 +30,7 @@ My goal throughout development was to connect the technical implementation with 
 
 ### Design philosophy
 
-[Explain what the game is trying to make the player feel.]
+<!--[Explain what the game is trying to make the player feel.]
 
 [Explain the player fantasy.]
 
@@ -38,19 +38,19 @@ My goal throughout development was to connect the technical implementation with 
 
 [Optional: explain the game's visual/narrative identity and how mechanics support it.]
 
-[Play on itch.io]
+[Play on itch.io]-->
 
 ## Postmortem
 
 ### Scope & goals
 
-[What was the original pitch?]
+<!--[What was the original pitch?]
 
 [What were you trying to achieve?]
 
 [What was the most important experience you wanted the player to have?]
 
-[What changed during development and why?]
+[What changed during development and why?]-->
 
 ### What went well?
 
