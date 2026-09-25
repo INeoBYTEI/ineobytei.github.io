@@ -26,27 +26,32 @@ const Model = {
       url: "https://github.com/INeoBYTEI/ineobytei.github.io/blob/main/assets/pages/ProjectOverdrive.md", cta: "Details →",
       img: "assets/projects/bsl.png",
       desc: "A high-speed sci-fi action platformer where you build momentum through fluid movement and high-octane combat while facing colossal creatures.",
-      role: "Game Director · Gameplay Programming · Game Feel/Juice",
+      role: "Game Director · Gameplay Programming · Game Feel/Juice · Animation",
       work: `
           <figure class="about-photo">
             <img src="assets/PO_Banner.jpg" alt="Neo Garcia Velazco" onerror="this.parentElement.remove()">
           </figure>
 
-          <p>I am a <strong>Game Programmer and Game Developer</strong> currently studying Game Programming 
-            at Yrgo. I previously studied Software Engineering at Blekinge Institute of Technology, but my 
-            passion has always been games. I have been making games as a hobby since I was 13, experimenting 
-            with programming, mechanics, and design long before I knew where those interests would take me.
+          <p>During the 11-week development of the Project Overdrive prototype, I acted mainly as <strong>Game Director</strong>, 
+          overseeing the project's vision, gameplay mechanics, and overall player experience. <br>
+          Along with the main role of <strong>Game Director</strong>, I also contributed significantly to the <strong>combat system, 
+          game feel, and animation.</strong>
           </p>
-          <br><br><br>
-          <figure class="about-photo">
-            <img src="assets/PO_Kill.gif" alt="Neo Garcia Velazco" onerror="this.parentElement.remove()">
-          </figure>
-          <p>At Yrgo, I have had the opportunity to take that passion into larger team projects. I served as 
-            <span class="stamp">Game Director</span> for both <strong>Chaos Courier</strong> and 
-            <strong>Project Overdrive</strong>, leading their development from concept through production and 
-            submission. These projects have allowed me to explore the parts of game development I enjoy most: 
-            <strong>gameplay, game feel, juice, player fantasy, and creating experiences with a strong visual 
-              and mechanical identity.</strong> Both projects are available to play on itch.io.
+          <br>
+          <p class="skill-row">
+            <figure class="about-photo" style="max-width: 30%;">
+              <img src="assets/pages/RoundUp.gif" alt="Neo Garcia Velazco" onerror="this.parentElement.remove()">
+            </figure>
+            <figure class="about-photo" style="max-width: 30%;">
+              <img src="assets/PO_Kill.gif" alt="Neo Garcia Velazco" onerror="this.parentElement.remove()">
+            </figure>
+            <figure class="about-photo" style="max-width: 30%;">
+              <img src="assets/PO_Proto_Dive.gif" alt="Neo Garcia Velazco" onerror="this.parentElement.remove()">
+            </figure>
+          </p>
+          <br><br><br><br>
+          
+          <p>
           </p>
           <br><br><br>
       `
@@ -63,19 +68,13 @@ const Model = {
             <img src="assets/CC_Poster.png" alt="Neo Garcia Velazco" onerror="this.parentElement.remove()">
           </figure>
 
-          <p>I am a <strong>Game Programmer and Game Developer</strong> currently studying Game Programming 
-            at Yrgo. I previously studied Software Engineering at Blekinge Institute of Technology, but my 
-            passion has always been games. I have been making games as a hobby since I was 13, experimenting 
-            with programming, mechanics, and design long before I knew where those interests would take me.
+          <p>Chaos Courier was an 8-week project developed at Yrgo, where I acted mainly as the 
+          <strong>Game Director</strong> and <strong>Lead Programmer</strong>. Working mainly on 
+          gameplay programming and game feel, I contributed significantly to the overall player experience.
           </p>
-          <br>
+          <br><br><br><br><br><br>
           
-          <p>At Yrgo, I have had the opportunity to take that passion into larger team projects. I served as 
-            <span class="stamp">Game Director</span> for both <strong>Chaos Courier</strong> and 
-            <strong>Project Overdrive</strong>, leading their development from concept through production and 
-            submission. These projects have allowed me to explore the parts of game development I enjoy most: 
-            <strong>gameplay, game feel, juice, player fantasy, and creating experiences with a strong visual 
-              and mechanical identity.</strong> Both projects are available to play on itch.io.
+          <p>
           </p>
       `
     }
